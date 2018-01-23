@@ -24,9 +24,9 @@ class HomePage extends React.Component {
                 {users.error && <span className="text-danger">ERROR: {users.error}</span>}
                 {users.items &&
                     <ul>
-                        {users.items.map((user, index) =>
-                            <li key={user.id}>
-                                {user.firstName + ' ' + user.lastName}
+                        {users.items.results.map((user, index) =>
+                            <li key={index}>
+                                {users.items.results[index].username}
                             </li>
                         )}
                     </ul>
